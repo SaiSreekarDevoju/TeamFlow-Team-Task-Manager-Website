@@ -26,7 +26,7 @@ const app = express();
 const requiredEnvs = ['DATABASE_URL', 'JWT_SECRET'];
 requiredEnvs.forEach(env => {
   if (!process.env[env]) {
-    console.warn(`WARNING: ${env} is missing`);
+    console.warn(`Missing env: ${env}`);
   }
 });
 
@@ -58,7 +58,6 @@ app.use(`${API_PREFIX}/search`, searchRoutes);
 // Global Error Handler
 app.use(errorHandler);
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server running in ${process.env.NODE_ENV || 'development'} mode on port ${PORT}`);
+app.listen(process.env.PORT || 5000, '0.0.0.0', () => {
+  console.log("Server running");
 });
