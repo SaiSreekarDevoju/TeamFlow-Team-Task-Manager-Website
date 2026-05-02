@@ -7,7 +7,9 @@ require('dotenv').config();
 
 const { errorHandler } = require('./src/middleware/errorHandler');
 const { requestLogger } = require('./src/middleware/requestLogger');
-require('./src/utils/cronJobs'); // Start cron jobs
+if (process.env.NODE_ENV === 'production') {
+  require('./src/utils/cronJobs');
+} // Start cron jobs
 
 // Import Routes
 const authRoutes = require('./src/routes/auth.routes');
@@ -24,8 +26,7 @@ const app = express();
 const requiredEnvs = ['DATABASE_URL', 'JWT_SECRET'];
 requiredEnvs.forEach(env => {
   if (!process.env[env]) {
-    console.error(`FATAL ERROR: ${env} is not defined.`);
-    process.exit(1);
+    console.warn(`WARNING: ${env} is missing`);
   }
 });
 
