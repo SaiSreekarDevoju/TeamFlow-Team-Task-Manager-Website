@@ -1,0 +1,28 @@
+[build]
+  builder = "nixpacks"
+
+[[services]]
+  name = "backend"
+  source = "backend"
+
+  [services.build]
+    buildCommand = "npm ci && npx prisma generate && npx prisma migrate deploy && node prisma/seed.js"
+    startCommand = "node server.js"
+
+  [services.variables]
+    PORT = "$PORT"
+    DATABASE_URL = "$DATABASE_URL"
+    JWT_SECRET = "$JWT_SECRET"
+    FRONTEND_URL = "$FRONTEND_URL"
+    NODE_ENV = "production"
+
+[[services]]
+  name = "frontend"
+  source = "frontend"
+
+  [services.build]
+    buildCommand = "npm ci && npm run build"
+    startCommand = "npx serve -s dist -l $PORT"
+
+  [services.variables]
+    VITE_API_URL = "$BACKEND_URL"
