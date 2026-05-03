@@ -2,13 +2,7 @@
 
 TeamFlow is a complete, production-ready full-stack web application designed for team task management. It features a rich Kanban board, real-time-ish notifications, time tracking, file attachments, role-based access control, and a responsive modern dashboard.
 
-**Live Demo:** [Placeholder for Live Demo Link]
-
-## Screenshots
-- [Placeholder: Dashboard Screenshot]
-- [Placeholder: Kanban Board Screenshot]
-- [Placeholder: Task Detail Screenshot]
-- [Placeholder: User Management Screenshot]
+**Live Demo:** http://localhost:5173/
 
 ## Tech Stack
 | Tier | Technology |
@@ -109,6 +103,7 @@ Run `node prisma/seed.js` from the `backend` directory. The seed is idempotent a
 ## Demo Credentials
 - **Admin User**: `admin@teamflow.com` / `Admin@1234`
 - **Member User**: `member@teamflow.com` / `Member@1234`
+- **Member User 1**: `rohit@teamflow.com` / `Rohit@1234`
 
 ## Known Limitations / Future Improvements
 - Implement email notifications using SendGrid or AWS SES.
