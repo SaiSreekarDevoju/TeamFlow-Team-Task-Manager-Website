@@ -101,14 +101,11 @@ Run `node prisma/seed.js` from the `backend` directory. The seed is idempotent a
 | Manage Users Table | ✅ | ❌ |
 
 ## Demo Credentials
-- **Admin User**: `admin@teamflow.com` 
-- **Password**: `Admin@1234`
+- **Admin User**: `admin@teamflow.com` / **Password**: `Admin@1234`
 
-- **Member User**: `member@teamflow.com`
-- **Password**: `Member@1234`
+- **Member User**: `member@teamflow.com` / **Password**: `Member@1234`
 
-- **Member User 1**: `rohit@teamflow.com`
-- **Password**: `Rohit@1234`
+- **Member User 1**: `rohit@teamflow.com` / **Password**: `Rohit@1234`
 
 ## Known Limitations / Future Improvements
 - Implement email notifications using SendGrid or AWS SES.
