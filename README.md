@@ -42,11 +42,11 @@ TeamFlow is a complete, production-ready full-stack web application designed for
 ### Backend (`backend/.env`)
 | Variable | Description |
 |---|---|
-| `PORT` | Server port (default 5000) |
+| `PORT` | Server port |
 | `DATABASE_URL` | PostgreSQL connection string |
 | `JWT_SECRET` | Secret for signing JWTs |
 | `JWT_EXPIRES_IN` | Token expiration (e.g., 7d) |
-| `FRONTEND_URL` | Allowed CORS origin (e.g., http://localhost:5173) |
+| `FRONTEND_URL` | Allowed CORS origin |
 | `NODE_ENV` | Environment (development/production) |
 | `MAX_FILE_SIZE_MB` | File upload limit in MB |
 | `UPLOAD_DIR` | Directory to save local uploads |
@@ -55,24 +55,24 @@ TeamFlow is a complete, production-ready full-stack web application designed for
 ### Frontend (`frontend/.env`)
 | Variable | Description |
 |---|---|
-| `VITE_API_URL` | Backend API base URL (e.g., http://localhost:5000/api/v1) |
+| `VITE_API_URL` | Backend API base URL |
 
 ## Database Seeding
 The application provides a seed script to populate the database with initial demo data.
 Run `node prisma/seed.js` from the `backend` directory. The seed is idempotent and will upset records safely.
 
 ## Railway Deployment Guide
-1. Push your code to a GitHub repository.
-2. Go to [Railway](https://railway.app/) → **New Project** → **Deploy from GitHub repo** → Select your repository.
-3. Click on the project, add a **PostgreSQL** plugin.
-4. Go to the **backend** service → Variables:
+1. Pushed code to a GitHub repository.
+2. GThen [Railway](https://railway.app/) → **New Project** → **Deploy from GitHub repo** → Selected repository.
+3. Clicked on the project, added a **PostgreSQL** plugin.
+4. Went to the **backend** service → Variables:
    - `DATABASE_URL` (Auto-injected by Railway PG plugin)
-   - `JWT_SECRET` = `your_secure_random_string`
-   - `FRONTEND_URL` = `(Wait to set this until frontend generates a public URL)`
-5. Go to the **frontend** service → Variables:
+   - `JWT_SECRET` = `my_secure_random_string`
+   - `FRONTEND_URL` = `a public URL is generated`
+5. Went to the **frontend** service → Variables:
    - `VITE_API_URL` = `https://<backend-public-domain>.up.railway.app/api/v1`
-6. Go back to the backend service and update `FRONTEND_URL` with the frontend's public URL.
-7. Railway will use the `railway.toml` at the root to orchestrate building the React app and running Prisma migrations before starting the Node server.
+6. Went back to the backend service and updated `FRONTEND_URL` with the frontend's public URL.
+7. Railway used the `railway.toml` at the root to orchestrate building the React app and run Prisma migrations before starting the Node server.
 
 ## REST API Reference
 | Method | Endpoint | Auth | Description |
@@ -101,11 +101,11 @@ Run `node prisma/seed.js` from the `backend` directory. The seed is idempotent a
 | Manage Users Table | ✅ | ❌ |
 
 ## Demo Credentials
-- **Admin User**: `admin@teamflow.com` / **Password**: `Admin@1234`
+- **Admin User**: `admin@teamflow.com` / **Password**: `Admin@1234` //For Colaboraters Only!!
 
-- **Member User**: `member@teamflow.com` / **Password**: `Member@1234`
+- **Member User**: `member@teamflow.com` / **Password**: `Member@1234` //For Colaboraters Only!!
 
-- **Member User 1**: `rohit@teamflow.com` / **Password**: `Rohit@1234`
+- **Member User 1**: `rohit@teamflow.com` / **Password**: `Rohit@1234` //For Colaboraters Only!!
 
 ## Known Limitations / Future Improvements
 - Implement email notifications using SendGrid or AWS SES.
