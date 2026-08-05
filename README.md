@@ -2,7 +2,7 @@
 
 TeamFlow is a complete, production-ready full-stack web application designed for team task management. It features a rich Kanban board, real-time-ish notifications, time tracking, file attachments, role-based access control, and a responsive modern dashboard.
 
-**Live Demo:** http://localhost:5173/
+**Live Demo:** For Collaboraters Only!!
 
 ## Tech Stack
 | Tier | Technology |
