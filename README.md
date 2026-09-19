@@ -1,6 +1,6 @@
 # TeamFlow – Team Task Manager
 
-TeamFlow is a complete, production-ready full-stack web application designed for team task management. It features a rich Kanban board, real-time-ish notifications, time tracking, file attachments, role-based access control, and a responsive modern dashboard.
+TeamFlow is a full-stack web application designed for team task management. It features a rich Kanban board, polling-based notifications, time tracking, file attachments, role-based access control, and a responsive modern dashboard.
 
 **Live Demo:** For Collaborators Only!!
 
@@ -59,7 +59,7 @@ TeamFlow is a complete, production-ready full-stack web application designed for
 
 ## Database Seeding
 The application provides a seed script to populate the database with initial demo data.
-Run `node prisma/seed.js` from the `backend` directory. The seed is idempotent and will upset records safely.
+Run `node prisma/seed.js` from the `backend` directory. User and project records are created with upserts; sample tasks, comments, and notifications are inserted when the seed runs.
 
 ## Railway Deployment Guide
 1. Pushed code to a GitHub repository.
